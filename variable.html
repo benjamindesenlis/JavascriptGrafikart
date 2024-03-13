@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+
+    <script>
+
+        // Une variable déclarée avec const ne peut se voir réassigner une valeur
+        const a = "Hello"
+        const b = 3
+        // Une variable déclarée avec let peut se voir réassigner une valeur
+        let c = "Bonjour"
+        let d = 4
+        // ceci est un number > nombre
+        // Je ne suis pas obligé de remettre un let d = 5 pour changer la valeur, juste un d = 5 fera l'affaire
+        const e = 'les gens'
+        // ceci est un string > chaîne de caractere
+        const f = 'Salut'
+        // Si je veux concaténer les deux variables je peux faire un a + ' ' b dans la console, le ' ' sert à rajouter un espace
+        // Je peux aussi faire de la manière suivante : `${a} ${b}`
+        // ${} sert à apeller une variable, impératif avec les backtick
+        const isMajeur = true
+        const isMineur = false
+        // Le résultat est un booléen
+        const isFrench = null
+        // Le résultat est un type null
+        // Ceci sert à indiquer une absence de valeur, par exemple pour sauver une chaîne de caractère mais si il n'y a rien on peut mettre null au lieu de mettre une chaîne de caractère vide tel ''
+        const isEnglish = undefined
+        // Il permet d'indiquer qu'une variable n'est pas défini
+        // Elle est automatiquement assigné a une valeur qui n'est pas assigné
+        const notes = [13, 14, 8, 9, 'hello', [1, 8, 6]]
+        // Ceci est un tableau, il peut avoir a l'interieur une chaine de caractere et un autre tableau
+        const notes2 = [
+            13,
+            14,
+            8,
+            9,
+            'hello',
+            [1, 8, 6]
+        ]
+        // Ceci est une meilleur façon d'afficher les tableau de façon plus claire
+        // > (6) [13, 14, 8, 9, 'hello', Array(3)] sera le resultat dans la console si j'affiche la variable notes
+        // Il y a 6 valeur dedans
+        // Si je veux la premiere valeur ca sera l'index 0 car ça commence par 0 et non 1
+        // si je veux récuperer la chaîne de caractere ça sera notes[4]
+        // Si je veux récuprer la troisieme valeur dans le tableau de mon tableau ça sera notes[5][2] et le résultat sera donc 6
+
+
+
+        const person = {
+            firstname: 'John',
+            lastname: 'Doe',
+        }
+
+        // Cette variable est un objet
+        // firstname et lastname sont des clés
+
+        const person2 = {
+            firstname: 'John',
+            lastname: 'Doe',
+            age: 24,
+            notes: [12, 14, 15],
+            job: {
+                name: 'Informaticien',
+                hours: 35
+            }
+        }
+        // On peut y ajouter d'autre clés
+        // On peut ajouter des tableaus (notes) ou même des objets à l'interieur de ce même objet (job)
+
+        // Si je veux récuperer une information je peux faire person2.firstname si je veux son prénom
+        // Si je veux récuperer la deuxieme notes je peux faire person2.notes[1]
+        // Si je veux récuprer l'objet dans un objet je peux faire person2.job.name pour récuperer le nom du métier
+        // Je peux changer le nom du métier de la manière suivante dans la console > person2.job.name = 'Développeur'
+
+        // Je peux aussi récuperer le prénom de mon objet de cette façon person['firstname']
+        // De cette manière si je créer une constante qui s'appelle const clef = 'firstname' alors
+        // person[clef] me renverra John
+
+        const person3 = {
+            firstname: 'John',
+            lastname: 'Doe',
+            age: 24,
+            notes: [12, 14, 15],
+            job: {
+                name: 'Informaticien',
+                hours: 35
+            },
+            [e]: 23
+            // Si j'affiche l'objet person dans la console, la ligne [e] : 23 me renverra > les gens: 23
+        }
+
+        let g = 'Salut'
+        let h = g
+        // Résultat console de g = salut
+        // Résultat console de h = salut
+        // Si je change h en h = 'Hello'
+        // Alors g affichera toujours Salut 
+
+        
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
