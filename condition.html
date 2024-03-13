@@ -7,6 +7,51 @@
     <title>Condition</title>
 
     <script>
+        if (true) {
+            console.log('Bonjour')
+        }
+        // Ici si notre condition est vrai alors la console affichera Bonjour
+
+        const age = 20
+        if (age >= 18) {
+            // Si la valeur dans ma constante age est supérieur ou égale a 18 alors la console renverra 'Vous êtes majeur'
+            console.log('Vous êtes majeur')
+        }
+
+        const age2 = 20
+        if (age !== 18) {
+            // Si la valeur dans ma constante age est différente de 18 alors la console renverra 'Vous n\'avez pas 18 ans'
+            console.log('Vous n\'avez pas 18 ans')
+        }
+
+        // Une chaine de caractere vide est équivalent a false
+        // Une condition va être vérifié si elle est truthy
+
+        // Operateur logique pour condition plus complexe
+
+        // const age3 = 17
+        // const pays = 'US'git add
+
+        // if (
+        //     (pays === 'FR' && age3 >= 18) ||
+        //     (pays === 'US' && age3 >= 16)
+        // ) {
+        //     console.log('Vous pouvez conduire')
+        // }
+
+        // On peux clarifier cette condition en :
+
+        const age4 = 18
+        const pays2 = 'FR'
+        const peutConduireFrance = pays2 === 'FR' && age4 >= 18
+        const peutConduireUS = pays2 === 'US' && age4 >= 16
+
+        if (peutConduireFrance || peutConduireUS) {
+            console.log('Vous avez le droit de conduire')
+        } else {
+            console.log('Vous n\'avez pas le droit de conduire')
+        }
+
 
 
     </script>
