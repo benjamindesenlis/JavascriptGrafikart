@@ -70,7 +70,43 @@
                 break
         }
 
+        // Exercice
 
+        const age6 = prompt('Quel est votre âge?')
+        if (age6 <= 13) {
+            console.log('Vous pouvez regardez Lilo et Stitch')
+        } else if (age6 > 13 && age6 < 18) {
+            console.log('Vous pouvez regardez Matrix')
+        } else {
+            console.log('Vous pouvez regardez Evil dead')
+        }
+
+        const year = 2024
+        const birthday = prompt('Quel est votre année de naissance?')
+
+        if (birthday > 2011) {
+            console.log('Vous pouvez regardez Lilo et Stitch')
+        } else if (birthday < 2011 && birthday > 2006) {
+            console.log('Vous pouvez regardez Matrix')
+        } else {
+            console.log('Vous pouvez regardez Evil dead')
+        }
+
+        const a = prompt('Rentrez un premier chiffre')
+        const b = prompt('Rentrez un second chiffre')
+        const result = a * b
+
+
+        if (isNaN(result)) {
+            console.log(`Opération impossible: Ce n'est pas un nombre`)
+        } else {
+            if (result >= 0) {
+                console.log(`${a} x ${b} = ${result} est positif`)
+            } else {
+                console.log(`${a} x ${b} = ${result} est négatif`)
+            }
+
+        }
 
     </script>
 
