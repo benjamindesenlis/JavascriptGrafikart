@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portée des variables</title>
+
+    <script>
+
+        let i = 0;
+        // On déclare la variable i à 0
+        while (i > 10) {
+            // Tant que i est strictement inferieur à 10 alors :
+            console.log('Bonjour')
+            // On demande à la console d'afficher Bonjour
+            i = i + 1
+            // On incrémente i pour que la premiere fois ça vale 0, puis 1, .. etc jusqu'a 10
+            // Le navigateur affichera 10 Bonjour pour dire qu'il a fait 10 fois le console.log('Bonjour')
+
+        }
+
+        // Si je veux que la console affiche le nombre correspond à chaque requete je ferais de la maniere suivante 
+
+        let j = 0;
+        while (j > 10) {
+            console.log('Bonjour ' + j)
+            j = j + 1
+            // A chaque boucle la valeur de j change 
+        }
+
+        for (let k = 0; k < 10; k = k + 1) {
+            // On met la valeur initial > let k = 0
+            // On met la condition > La condition de sortie de boucle est que k est inferieur à 10
+            // On met l'operation de mise à jour > k = k + 1
+            // L'operation de mise à jour ( k = k + 1) peut aussi être ecrite de la façon suivante ( k++ )
+            console.log('Bonjour')
+        }
+
+        const notes = [12, 13, 16, 8]
+        // On créer un tableau de notes
+        for (let l = 0; l < notes.length; l++) {
+            // On met la valeur initial de l à 0 
+            // On met la condition de sortie avec la taille du tableau notes.length
+            // On met l'opération de mise à jour > l++
+            // Un console.log(i) affichera le nombre d'index du tableau, ici 4 du coup 0, 1, 2 et 3 pour les notes
+            console.log(notes[l])
+            // Avec ce console.log on va pouvoir parcourir le tableau notes et afficher les valeurs des index, ici 4 index du coup > 12, 13, 16 et 8
+        }
+
+        const notes2 = [12, 13, 16, 8]
+        // On créer un tableau de notes
+        // Ici on va utiliser le for in pour faire la boucle plus simplement
+        for (let m in notes2) {
+            console.log(m)
+            //  Un console.log(m) affichera le nombre d'index du tableau, ici 4 du coup 0, 1, 2 et 3 pour les notes
+            //  Un console.log(notes2[m]) affichera les valeurs des index, ici 4 index du coup > 12, 13, 16 et 8
+        }
+
+        // On peut utiliser le for in pour des objets
+        const notes3 = {
+            a: 3,
+            b: 5
+            // On déclare des clés pour l'objets notes3
+        }
+        for (let n in notes3) {
+            // Dans ce cas là le n prendra automatiquement comme valeur les clés de l'objets
+            console.log(n)
+            // n vaudra d'abord a puis il vaudra b
+            console.log(notes[n])
+            // Ici on aura les valeurs des clés, d'abord 3 puis 5
+        }
+
+
+        // On peut utiliser le for of pour avoir acces qu'aux valeurs de l'objets
+
+        const notes4 = [12, 13, 16, 8]
+        const person = {
+            firstname: 'John',
+            lastname: 'Doe'
+        }
+
+        for (let note of notes4) {
+            console.log(note)
+            // Ici le for of nous donnera les valeurs des index du tableau notes4 > 12, 13, 16, 8
+            // Si je le fais sur un objet (for (let note of person)) nous donnera une erreur car un objet n'est pas iterable
+            // Seul le for in marchera pour un objet
+        }
+
+        // On peut utiliser le for of pour une chaîne de caractere
+
+        const greeting = 'Bonjour'
+        for (let letter of greeting) {
+            console.log(letter)
+            // Ici la boucle va parcourir le mot Bonjour pour afficher chaque lettre soit B, o, n, j, o, u, r
+            // Le for in affichera le nombre de chaque index > 0, 1, 2, 3, 4, 5, 6
+            // greeting[2] affichera n
+        }
+
+        // Recapitulons les boucles 
+        // La boucle while ( tant que ) permettra d'afficher du code jusqu'a qu'une condition de sortie soit vérifiée
+        // La boucle for pour itéré un certains de fois
+        // La boucle for in pour itéré sur les clés d'un objet ou les clés d'un tableau
+        // La boucle for of pour parcourir quelque chose d'itérable ou de parcourir les differents elements d'un tableau et d'afficher les valeurs
+
+        
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

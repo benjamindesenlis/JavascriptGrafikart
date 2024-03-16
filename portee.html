@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portée des variables</title>
+
+    <script>
+
+        let age = 18
+        if (age >= 18) {
+            let suffix = 'hello'
+        }
+        console.log(suffix)
+
+        // Ici la console ne retrouvera pas la constante suffix car elle n'est pas a l'interieur du if 
+
+        let age2 = 18
+        if (age2 >= 18) {
+            let suffix2 = 'hello'
+            console.log(suffix2)
+        }
+
+        // Ici ca sera affiché 
+        // Même chose pour le const
+
+        let age3 = 18
+        if (age3 >= 18) {
+            age3 *= 2
+        }
+        console.log('age3')
+
+        // Ici ca sera affiché car la variable est déclaré dans le bloc parent
+
+        let age4 = 18
+        if (age4 >= 18) {
+            var suffix3 = 4
+        }
+        console.log(suffix3)
+
+        // Ici ca sera affiché, vieil regle du var à ne pas reproduire mais possible de les voir dans d'anciens code
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
