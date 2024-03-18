@@ -36,6 +36,147 @@
             return false
         }
 
+        // La différence entre les deux est que le function canDrive peut être apellé avant le script tandis que le const canDrive2 non
+        // La premiere ne peut pas être redéfini tandis que la const oui
+
+        function greeting(name) {
+            // Ici on créer une fonction greeting on lui passe comme paramétre name qui est donc une variable
+            console.log(`Bonjour ${name}`)
+            // On renvoie un Bonjour avec la variable name
+        }
+        greeting('John')
+        // La console nout renvoie un premier Bonjour John
+        greeting('Jane')
+        // La console nout renvoie un second Bonjour Jane car la fonction est dynamiques
+
+        let notes = [12, 13, 14]
+        // On créer un tableau de notes
+        function upNotes(n) {
+            // On créer une fonction pour mettre à jour les notes et mettre plus de points
+            // On ajoute le parametre n
+            n[1]++
+            // On incrémente l'élement a l'index 0
+        }
+
+        upNotes(notes)
+        console.log(notes)
+
+        function maFonction() {
+            console.log(this)
+        }
+
+        maFonction()
+        // J'appel ma fonction
+        // this fait reference à un objet global
+        maFonction.call(3)
+
+        const a = {
+            // On créer un objet a
+            firstname: 'John',
+            lastname: 'Doe',
+            fullname: function () {
+                // On créer une fonction qui nous donnera le nom complet
+                console.log(`${this.firstname} ${this.lastname}`)
+            }
+        }
+
+        a.fullname()
+        // J'appel la fonction
+        // On appel ça une méthode ( le fullname )
+
+        // Les fonctions fléchées
+
+        const maFonction2 = (param1, param2) => {
+            console.log(param1, param2)
+        }
+
+        maFonction2(1, 2)
+
+
+        const somme = (a, b) => {
+            return a + b
+
+        }
+        console.log(somme(1, 2))
+
+        // On peut l'écrire aussi de la façon suivante
+
+        const somme2 = (a, b) => a + b
+        console.log(somme(2, 3))
+
+        const isPair = function (a, cb) {
+            if (a % 2 === 0) {
+                cb()
+            } else {
+                console.log('Mon nombre est impair')
+            }
+        }
+
+        isPair(3, function () {
+            console.log('Mon nombre est pair')
+        })
+
+
+        // Exercice pour devenir un nombre entre 0 et 10
+
+        // function getRandomInt(max) {
+        //     return Math.floor(Math.random() * (max + 1))
+        // }
+        // // On créer la fonction pour avoir un chiffre entier, on rajoute le +1 car la fonction démarre a 0
+        // const solution = getRandomInt(10)
+        // // On appel la fonction avec comme parametre 10 pour avoir un chiffre entre 1 et 10
+        // console.log(solution)
+        // // On appel un chiffre au hasard avec la const solution qui est la fonction getRandomInt
+
+        // function isRight(n) {
+        //     return solution === n
+        // }
+
+        // // Cette fonction va prendre en parametre le nombre que l'user a rentré, elle renverra true ou false grace au return
+        // // Si la solution est égale a n alors on a la bonne réponse
+
+        // function guess() {
+        //     const number = prompt('Entrez un nombre') * 1
+        //     return isRight(number)
+        // }
+
+        // // La fonction permet de tester son chiffre
+        // // On l'appel number, on lui demande de saisir un nombre
+        // // Si l'user a raison on retourne true, sinon false
+
+        // for (i = 0; i < 3; i++) {
+        //     // On met le nombre de chance d'essaie, soit 3
+        //     if (guess()) {
+        //         // On appel la fonction guess, elle renverra true ou false, true donne un bravo, on met un break pour sortir de la boucleS
+        //         console.log('Bravo')
+        //         break;
+        //     } else if (i === 2) {
+        //         // Si on dépasse le 3eme essaie alors on a perdu
+        //         console.log('vous avez perdu')
+        //     }
+        // }
+
+        function isPremier(n) {
+            // On créer la fonction isPremier et on passe en parametre un nombre
+            if (n < 2) {
+                return false
+            }
+            for (let i = n - 1; i > 1; i--) {
+                // on va parcourir les nombres
+                if (n % i === 0) {
+                    return false
+                }
+            } return true
+        }
+
+        console.log('0', isPremier(0))
+        console.log('1', isPremier(1))
+        console.log('2', isPremier(2))
+        console.log('3', isPremier(3))
+        console.log('11', isPremier(11))
+        console.log('12', isPremier(12))
+
+
 
     </script>
 
