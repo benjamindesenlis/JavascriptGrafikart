@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        // Exercice de Palindrome 
+        // function isPalindrome(word) {
+        //     const reversedWord = word
+        //         .split('')
+        //         .reverse()
+        //         .join('')
+        //     return word.toUpperCase() === reversedWord.toUpperCase()
+        // }
+
+        // const words = {
+        //     kayak: true,
+        //     SOS: true,
+        //     Kayak: true,
+        //     Bonjour: false,
+        // }
+
+        // for (let word in words) {
+        //     if (isPalindrome(word) !== words[word]) {
+        //         console.error(`isPalindrome(${word}) aurait dû renvoyer ${words[word]}`);
+        //     }
+        // }
+
+
+
+
+
+
+
+        // // Exercice moyenne étudiants
+
+        // // Déclaration d'un tableau d'objets représentant des étudiants avec leurs notes
+        // const students = [
+        //     {
+        //         name: 'John',
+        //         notes: [1, 20, 18, 19, 12]
+        //     },
+        //     {
+        //         name: 'Jane',
+        //         notes: [17, 18, 20, 13, 15]
+        //     },
+        //     {
+        //         name: 'Sophie',
+        //         notes: [17, 12, 14, 15, 13]
+        //     },
+        //     {
+        //         name: 'Marc',
+        //         notes: [2, 3, 5, 8, 9]
+        //     },
+        //     {
+        //         name: 'Manon',
+        //         notes: [18, 17, 18, 19, 12]
+        //     }
+        // ]
+
+        // // Définition d'une fonction pour calculer la moyenne d'un tableau de notes
+        // const moyenne = (notes) => {
+        //     // Initialisation de la somme des notes
+        //     let sum = 0
+        //     // Boucle à travers chaque note et pour ajouter à la somme (sum)
+        //     for (let note of notes) {
+        //         sum = sum + note
+        //     }
+        //     // Retourne la moyenne en divisant la somme par le nombre de notes
+        //     return sum / notes.length
+        // }
+
+        // // On va créer uen fonction pour comparer les étudiants
+
+        // const compareStudent = (a, b) => {
+        //     return b.moyenne - a.moyenne
+        // }
+
+
+        // // Parcours de chaque étudiant dans le tableau students
+        // for (let student of students) {
+        //     // Calcul de la moyenne pour chaque étudiant en utilisant la fonction moyenne (const moyenne)
+        //     student.moyenne = moyenne(student.notes) // Ajoute la valeur moyenne à chaque objet étudiant
+        //     student.worst = Math.min(...student.notes)
+        //     student.best = Math.max(...student.notes)
+        // }
+
+        // students.sort(compareStudent)
+
+        // const formatStudent = (student) => {
+        //     return `${student.name} avec une moyenne de ${student.moyenne} avec comme meilleur note ${student.best} et comme pire note ${student.worst}`
+        // }
+
+        // console.log(`Top 3 étudiants
+        // 1:${formatStudent(students[0])}
+        // 2:${formatStudent(students[1])}
+        // 3:${formatStudent(students[2])}
+        // `)
+
+        // Affichage des détails de chaque étudiant dans la console
+
+        // L'objet étudiant ressemblera à ça dans la console :
+        // 0:
+        // moyenne : 14
+        // name: "John
+        // notes: (5) [1, 20, 18, 19, 12]
+
+
+        const phrase = `Vous savez, moi je ne crois pas qu’il y ait de bonne ou de mauvaise situation. Moi, si je devais résumer ma vie aujourd’hui avec vous, je dirais que c’est d’abord des rencontres. Des gens qui m’ont tendu la main, peut-être à un moment où je ne pouvais pas, où j’étais seul chez moi. Et c’est assez curieux de se dire que les hasards, les rencontres forgent une destinée... Parce que quand on a le goût de la chose, quand on a le goût de la chose bien faite, le beau geste, parfois on ne trouve pas l’interlocuteur en face je dirais, le miroir qui vous aide à avancer. Alors ça n’est pas mon cas, comme je disais là, puisque moi au contraire, j’ai pu ; et je dis merci à la vie, je lui dis merci, je chante la vie, je danse la vie... je ne suis qu’amour ! Et finalement, quand des gens me disent « Mais comment fais-tu pour avoir cette humanité ? », je leur réponds très simplement que c’est ce goût de l’amour, ce goût donc qui m’a poussé aujourd’hui à entreprendre une construction mécanique... mais demain qui sait ? Peut-être simplement à me mettre au service de la communauté, à faire le don, le don de soi. `
+
+        const frequencies = {}
+        const words = phrase
+            .toLowerCase()
+            .replaceAll(',', '')
+            .replaceAll('?', '')
+            .replaceAll('!', '')
+            .replaceAll('"', '')
+            .replaceAll('«', '')
+            .replaceAll(';', '')
+            .replaceAll('»', '')
+            .split(' ')
+        for (let word of words) {
+            if (word !== '') {
+                if (frequencies[word]) {
+                    frequencies[word]++
+                } else {
+                    frequencies[word] = 1
+                }
+            }
+        }
+
+        console.log(frequencies)
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
