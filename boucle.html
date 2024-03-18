@@ -103,7 +103,65 @@
         // La boucle for in pour itéré sur les clés d'un objet ou les clés d'un tableau
         // La boucle for of pour parcourir quelque chose d'itérable ou de parcourir les differents elements d'un tableau et d'afficher les valeurs
 
-        
+        // const chiffre = prompt('Rentrez un chiffre entre 0 et 10')
+
+        // if (chiffre >= 0 && chiffre <= 10) {
+        //     for (let a = chiffre; a < 10; a++)
+        //         console.log(a)
+        // } else {
+        //     console.log('Le chiffre est inferieur à 0 ou supérieur à 10')
+        // }
+
+        // let chiffre2 = prompt('Rentrez un chiffre entre 0 et 10')
+        // // On demande a l'user un nombre entre 0 et 10
+        // if (chiffre2 > 10 || chiffre2 < 0) {
+        //     // Si le chiffre est superieur à 10 ou inferieur à 0 alors
+        //     console.log('Le nombre est superieur à 10 ou inferieur à 0')
+        // } else {
+        //     // On va décrementer chiffre2
+        //     while (chiffre2 >= 0) {
+        //         // Tant que le chiffre est supérieur ou égale à 0 alors on continue
+        //         console.log(chiffre2)
+        //         chiffre2 = chiffre2 - 1
+        //     }
+        //     // On affiche la valeur de chiffre2
+        //     // On décremente chiffre2
+        //     // chiffre2--
+        //     // On peut aussi l'écrire de cette façon
+        // }
+
+        // Si on veut utiliser un for alors
+
+        // let chiffre3 = prompt('Rentrez un chiffre entre 0 et 10')
+        // // On declare chiffre3 en demandant a l'user de rentrez un nombre
+        // // On remet la condition 
+        // if (chiffre3 > 10 || chiffre3 < 0) {
+        //     console.log('Le nombre est superieur à 10 ou inferieur à 0')
+        // } else {
+        //     for (let b = chiffre3; b >= 0; b--)
+        //         // On met la valeur initial > let b = le nombre rentré par l'user
+        //         // On met la condition > b doit être supérieur ou égale a 0
+        //         // On met l'operation de mise à jour > chiffre--
+        //         console.log(b)
+        // }
+
+        let guess = 8
+        let chiffre4
+        // On initialise la variable chiffre vide
+
+        while (chiffre4 !== guess) {
+            // Tant que le chiffre rentrez par l'user n'est pas 8 
+            chiffre4 = prompt('Votre chiffre') * 1
+            // Alors on affiche Dommage
+            if (chiffre4 !== guess) {
+                console.log('Dommage')
+            }
+            // Sinon on lui dit qu'il a trouvé
+        } console.log('Bravo vous avez trouvez!')
+
+
+
+
     </script>
 
 </head>

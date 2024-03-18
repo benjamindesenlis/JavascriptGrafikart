@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function canDrive(age, pays) {
+            // Ici on créer la fonction et on fixe les paramètre à celle ci, ici age et pays
+            if (
+                (age >= 18 && pays === 'FR') ||
+                (age >= 16 && pays === 'US')
+            ) {
+                return true
+                // Ici on veut renvoyer une valeur soit un booléen true or false
+            }
+            return false
+        }
+
+        console.log(canDrive(19, 'FR'))
+
+
+
+        // On peut aussi écrire de cette façon car une fonction est un type d'objet particulier
+        const canDrive2 = function (age2, pays2) {
+            if (
+                (age2 >= 18 && pays2 === 'FR') ||
+                (age2 >= 16 && pays2 === 'US')
+            ) {
+                return true
+                // Ici on veut renvoyer une valeur soit un booléen true or false
+            }
+            return false
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
